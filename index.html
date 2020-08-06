@@ -1,0 +1,27 @@
+<body style="background-color: white; width: 100vw; height: 100vh">
+  <div class="image-container"style="width: 500px; height: 120px"></div>
+</body>
+
+<script>
+  const image = [1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0]
+  const container = document.querySelector(".image-container")
+  const mapColor = pixel => {
+    switch(pixel){
+      case 1:
+        return "white"
+      case 2:
+        return "transparent"
+      case 0:
+        return "black"
+    }
+  }
+  image.forEach(pixel => {
+    element = document.createElement("div")
+    element.style.backgroundColor = mapColor(pixel)
+    element.style.width = "20px"
+    element.style.height = "20px"
+    element.style.display = "inline-block"
+    container.appendChild(element)
+  })
+
+</script>
